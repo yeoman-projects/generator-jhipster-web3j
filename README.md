@@ -1,10 +1,19 @@
 # generator-jhipster-web3j
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> JHipster module, JHipster module to integrete web3j dependancy
+> JHipster module, JHipster module to integrate web3j dependency
 
 # Introduction
 
+![web3j](https://avatars2.githubusercontent.com/u/22208471?s=400&v=4) 
+![web3j](https://www.jhipster.tech/jhipster-artwork/logos/JHipster%20banner.png)
+
 This is a [JHipster](https://www.jhipster.tech/) module, that is meant to be used in a JHipster application.
+This module is based on the [web3j project](https://github.com/web3j/web3j).
+
+It add all dependencies you need to use web3j with a JHipster application.
+You can check the [sample project](https://github.com/web3j/sample-project-gradle) from web3j.
+
+Keep in mind this an alpha version. Feel free to contribute.
 
 # Prerequisites
 
@@ -43,6 +52,7 @@ yarn global upgrade generator-jhipster-web3j
 ```
 
 # Usage
+After running the module you should now have a new web3j dependency in your pom.xml or build.gradle.
 
 # License
 
