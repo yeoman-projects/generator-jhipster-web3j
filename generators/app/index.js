@@ -3,6 +3,7 @@ const semver = require('semver');
 const BaseGenerator = require('generator-jhipster/generators/generator-base');
 const jhipsterConstants = require('generator-jhipster/generators/generator-constants');
 const packagejs = require('../../package.json');
+const constants = require('./constants');
 
 module.exports = class extends BaseGenerator {
     get initializing() {
@@ -110,8 +111,9 @@ module.exports = class extends BaseGenerator {
         if (this.clientFramework === 'angularX' || this.clientFramework === 'angular2') {
             this.template('dummy.txt', 'dummy-angularX.txt');
         }
+
         if (this.buildTool === 'maven') {
-            this.addMavenDependency('org.web3j', 'core', '4.5.5');
+            this.addMavenDependency(constants.WEB3J_GROUPID, constants.WEB3J_ARTIFACTID, constants.WEB3J_MAVEN_VERSION);
         } else if (this.buildTool === 'gradle') {
             //  this.template('dummy.txt', 'dummy-gradle.txt');
         }
