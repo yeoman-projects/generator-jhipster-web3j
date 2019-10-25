@@ -105,17 +105,10 @@ module.exports = class extends BaseGenerator {
         this.log(`\nmessage=${this.message}`);
         this.log('------\n');
 
-        if (this.clientFramework === 'angular1') {
-            this.template('dummy.txt', 'dummy-angular1.txt');
-        }
-        if (this.clientFramework === 'angularX' || this.clientFramework === 'angular2') {
-            this.template('dummy.txt', 'dummy-angularX.txt');
-        }
-
         if (this.buildTool === 'maven') {
             this.addMavenDependency(constants.WEB3J_GROUPID, constants.WEB3J_ARTIFACTID, constants.WEB3J_MAVEN_VERSION);
         } else if (this.buildTool === 'gradle') {
-            //  this.template('dummy.txt', 'dummy-gradle.txt');
+            // TODO handle gradle case
         }
     }
 
