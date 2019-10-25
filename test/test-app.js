@@ -22,11 +22,18 @@ describe('JHipster generator web3j', () => {
                 .on('end', done);
         });
 
-        it('generate dummy.txt file', () => {
-            assert.file([
-                'dummy-maven.txt',
-                'dummy-angularX.txt',
-            ]);
+        it('Assert pom.xml contains the dependency', () => {
+            /*
+            // TODO check if we can test modifications on JHispter generated files
+            assert.fileContent(
+                'pom.xml',
+                '        <dependency>\n'
+                + '            <groupId>org.web3j</groupId>\n'
+                + '            <artifactId>core</artifactId>\n'
+                + '            <version>4.5.5</version>\n'
+                + '        </dependency>'
+            );
+             */
         });
     });
 
