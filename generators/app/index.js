@@ -69,9 +69,11 @@ module.exports = class extends BaseGenerator {
         const webappDir = jhipsterConstants.CLIENT_MAIN_SRC_DIR;
 
         if (this.buildTool === 'maven') {
-            this.addMavenDependency(constants.WEB3J_GROUPID, constants.WEB3J_ARTIFACTID, constants.WEB3J_MAVEN_VERSION);
+            this.addMavenProperty(constants.WEB3J_MAVEN_PROPERTY_VERSION_NAME, constants.WEB3J_PROPERTY_VERSION_VALUE);
+            this.addMavenDependency(constants.WEB3J_GROUPID, constants.WEB3J_ARTIFACTID, `\${${constants.WEB3J_MAVEN_PROPERTY_VERSION_NAME}}`);
         } else if (this.buildTool === 'gradle') {
-            this.addGradleDependency('implementation', constants.WEB3J_GROUPID, constants.WEB3J_ARTIFACTID, constants.WEB3J_MAVEN_VERSION);
+            this.addGradleProperty(constants.WEB3J_GRADLE_PROPERTY_VERSION_NAME, constants.WEB3J_PROPERTY_VERSION_VALUE);
+            this.addGradleDependency('implementation', constants.WEB3J_GROUPID, constants.WEB3J_ARTIFACTID, `\${${constants.WEB3J_GRADLE_PROPERTY_VERSION_NAME}}`);
         }
     }
 
