@@ -2,7 +2,7 @@
 
 const path = require('path');
 const fse = require('fs-extra');
-const assert = require('yeoman-assert');
+// const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
 describe('JHipster generator web3j', () => {
@@ -34,30 +34,6 @@ describe('JHipster generator web3j', () => {
                 + '        </dependency>'
             );
              */
-        });
-    });
-
-    describe('Test with Gradle and Angular1', () => {
-        beforeEach((done) => {
-            helpers
-                .run(path.join(__dirname, '../generators/app'))
-                .inTmpDir((dir) => {
-                    fse.copySync(path.join(__dirname, '../test/templates/gradle-angular1'), dir);
-                })
-                .withOptions({
-                    testmode: true
-                })
-                .withPrompts({
-                    message: 'simple message to say hello'
-                })
-                .on('end', done);
-        });
-
-        it('generate dummy.txt file', () => {
-            assert.file([
-                'dummy-gradle.txt',
-                'dummy-angular1.txt',
-            ]);
         });
     });
 });
