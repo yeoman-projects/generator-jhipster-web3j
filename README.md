@@ -4,6 +4,9 @@
 
 # Introduction
 
+![web3j](https://avatars2.githubusercontent.com/u/22208471?s=400&v=4) 
+![web3j](https://www.jhipster.tech/jhipster-artwork/logos/JHipster%20banner.png)
+
 This is a [JHipster](https://www.jhipster.tech/) module, that is meant to be used in a JHipster application.
 This module is based on the [web3j project](https://github.com/web3j/web3j).
 
