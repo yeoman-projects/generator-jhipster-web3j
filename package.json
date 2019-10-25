@@ -1,6 +1,6 @@
 {
   "name": "generator-jhipster-web3j",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "JHipster module to integrate web3j dependency",
   "keywords": [
     "yeoman-generator",
