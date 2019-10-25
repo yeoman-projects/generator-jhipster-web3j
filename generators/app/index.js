@@ -71,7 +71,7 @@ module.exports = class extends BaseGenerator {
         if (this.buildTool === 'maven') {
             this.addMavenDependency(constants.WEB3J_GROUPID, constants.WEB3J_ARTIFACTID, constants.WEB3J_MAVEN_VERSION);
         } else if (this.buildTool === 'gradle') {
-            // TODO handle gradle case
+            this.addGradleDependency('implementation', constants.WEB3J_GROUPID, constants.WEB3J_ARTIFACTID, constants.WEB3J_MAVEN_VERSION);
         }
     }
 

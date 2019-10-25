@@ -16,9 +16,6 @@ describe('JHipster generator web3j', () => {
                 .withOptions({
                     testmode: true
                 })
-                .withPrompts({
-                    message: 'simple message to say hello'
-                })
                 .on('end', done);
         });
 
@@ -34,6 +31,29 @@ describe('JHipster generator web3j', () => {
                 + '        </dependency>'
             );
              */
+        });
+    });
+
+    describe('Test with Gradle and AngularX', () => {
+        beforeEach((done) => {
+            helpers
+                .run(path.join(__dirname, '../generators/app'))
+                .inTmpDir((dir) => {
+                    fse.copySync(path.join(__dirname, '../test/templates/gradle-angularX'), dir);
+                })
+                .withOptions({
+                    testmode: true
+                })
+                .on('end', done);
+        });
+
+        it('Assert build.gradle contains the dependency', () => {
+            /*
+            // TODO check if we can test modifications on JHispter generated files
+            assert.fileContent(
+                'build.gradle', 'implementation "org.web3j:core:4.5.5"'
+            );
+            */
         });
     });
 });
