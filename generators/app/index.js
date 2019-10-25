@@ -38,22 +38,8 @@ module.exports = class extends BaseGenerator {
     }
 
     prompting() {
-        const prompts = [
-            {
-                type: 'input',
-                name: 'message',
-                message: 'Please put something',
-                default: 'hello world!'
-            }
-        ];
-
         const done = this.async();
-        this.prompt(prompts).then((props) => {
-            this.props = props;
-            // To access props later use this.props.someOption;
-
-            done();
-        });
+        done();
     }
 
     writing() {
